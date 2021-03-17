@@ -46,3 +46,50 @@
 	top: 60%;
 	background-color: hsl(195deg, 20%, 86%);
 }
+
+@media (max-width: 375px) {
+	.maxWidthWrapper {
+		max-width: none;
+		/* overflow: hidden; */
+	}
+
+	.header {
+		max-width: 100%;
+	}
+
+	.characterWrapper {
+		position: static;
+		min-height: 500px;
+		width: 100%;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	.controlColumn {
+		max-width: none;
+		width: 100%;
+		display: flex;
+		margin-top: -350px;
+		margin-bottom: 50px;
+		overflow-x: scroll;
+	}
+
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.controlColumn::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.controlColumn {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+
+	.controlColumn > * + * {
+		margin-left: 2rem;
+	}
+
+	.perspective {
+		display: none;
+	}
+}
